@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.290625" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/a1.xml" value="0.15989583333333332" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/a2.xml" value="0.15989583333333332" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/a3.xml" value="0.15989583333333332" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/a4.xml" value="0.15989583333333332" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/background_utama.xml" value="0.290625" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/bguang.xml" value="0.2875" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/color.xml" value="0.290625" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/dompet.xml" value="0.15989583333333332" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/ic_baseline_credit_card_24.xml" value="0.2875" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/ic_baseline_shopping_cart_24.xml" value="0.2875" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/ic_graph.xml" value="0.2875" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/ic_home.xml" value="0.2875" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/ic_launcher_background.xml" value="0.290625" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/ic_money.xml" value="0.2875" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/ic_person.xml" value="0.2875" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/profile1.xml" value="0.290625" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/profile2.xml" value="0.290625" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/t1.xml" value="0.290625" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/t2.xml" value="0.290625" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/t3.xml" value="0.290625" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/t4.xml" value="0.290625" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/targeting.xml" value="0.16041666666666668" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/transaksi.xml" value="0.2875" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/transaksi_cepat.xml" value="0.290625" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/transaksi_cepat1.xml" value="0.290625" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/layout/fragment_history.xml" value="0.264" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/layout/fragment_laporan.xml" value="0.27447916666666666" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/layout/fragment_notif.xml" value="0.27447916666666666" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/layout/fragment_profile.xml" value="0.27447916666666666" />
+        <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/menu/bottom_menu.xml" value="0.27447916666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.1888111888111888" />
+      </ProjectState>
+    </option>
+  </component>
+</project>
