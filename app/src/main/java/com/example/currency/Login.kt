@@ -18,16 +18,21 @@ class Login : AppCompatActivity() {
         setContentView(R.layout.activity_login)
 
         buttonLogin = findViewById(R.id.button)
-        buttonLogin.setOnClickListener { open1() }
+       //buttonLogin.setOnClickListener { open1() }
 
         Regis = findViewById(R.id.button2)
-        Regis.setOnClickListener { open2() }
+        //Regis.setOnClickListener { open2() }
+
 
         //menjalankan service
         val servicelogin = Intent(this, LoginSuccesService::class.java)
         buttonLogin.setOnClickListener{
             startService(servicelogin)
+            open1()
+
         }
+
+        Regis.setOnClickListener{open2()}
     }
 
     private fun open1() {
