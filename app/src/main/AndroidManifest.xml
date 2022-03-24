@@ -15,9 +15,7 @@
         </service>
         <activity
             android:name=".Register"
-            android:exported="true"
-            android:theme= "@style/Theme.MaterialComponents.DayNight.NoActionBar"
-            />
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
