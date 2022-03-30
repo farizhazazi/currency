@@ -89,4 +89,3 @@ class Register : AppCompatActivity() {
         //startActivity(intentdaftar2)
 
     }
-}
