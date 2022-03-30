@@ -31,7 +31,7 @@ class Register : AppCompatActivity() {
         //buttonRegister2.setOnClickListener { openMyActivity3() }
 
         buttonRegister2.setOnClickListener {
-            val intent = Intent(this, Login::class.java).apply {
+            val intent = Intent(this@Register, confirm::class.java).apply {
                 flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             }
             val pendingIntent: PendingIntent = PendingIntent.getActivity(this, 0, intent, 0)
@@ -52,7 +52,7 @@ class Register : AppCompatActivity() {
                 createNotificationChannel()
             }
 
-            openMyActivity3()
+            //openMyActivity3()
 
         }
         fun createNotificationChannel() {
@@ -84,9 +84,9 @@ class Register : AppCompatActivity() {
         startActivity(intentmasuk2)
     }
 
-    private fun openMyActivity3() {
-        val intentdaftar2 = Intent(this@Register, confirm::class.java)
-        startActivity(intentdaftar2)
+    //private fun openMyActivity3() {
+        //val intentdaftar2 = Intent(this@Register, confirm::class.java)
+        //startActivity(intentdaftar2)
 
     }
 }
