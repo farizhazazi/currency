@@ -37,9 +37,9 @@ class Register : AppCompatActivity() {
             val pendingIntent: PendingIntent = PendingIntent.getActivity(this, 0, intent, 0)
 
             val builder = NotificationCompat.Builder(this, "channel 1")
-                .setSmallIcon(R.drawable.ic_baseline_add_24)
-                .setContentTitle("title")
-                .setContentText("notif content")
+                .setSmallIcon(R.drawable.ic_baseline_monetization_on_24)
+                .setContentTitle("TabunganKu")
+                .setContentText("JANGAN BAGIKAN kode ini kepada siapa pun, TERMASUK TIM TABUNGANKU. WASPADA PENIPUAN! MASUK KE AKUN dengan kode verifikasi 144477.")
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 // Set the intent that will fire when the user taps the notification
                 .setContentIntent(pendingIntent)
