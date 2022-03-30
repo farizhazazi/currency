@@ -10,13 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Currency">
         <activity
+            android:name=".top_up"
+            android:exported="false" />
+        <activity
             android:name=".confirm"
             android:exported="false" />
 
         <service
             android:name=".LoginSuccesService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
 
         <activity
             android:name=".Register"

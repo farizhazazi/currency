@@ -1,7 +1,11 @@
 package com.example.currency
 
+import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.app.PendingIntent
+import android.content.Context
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Message
@@ -23,19 +27,56 @@ class Register : AppCompatActivity() {
         buttonLogin2 = findViewById(R.id.button3)
         buttonRegister2 = findViewById(R.id.button4)
 
-        buttonLogin2.setOnClickListener{openMyActivity2()}
-        buttonRegister2.setOnClickListener{openMyActivity3()}
+        buttonLogin2.setOnClickListener { openMyActivity2() }
+        //buttonRegister2.setOnClickListener { openMyActivity3() }
 
-        buttonRegister2.setOnClickListener{
-            val title = getTitle().toString()
-            //val message =
-                val builder = NotificationCompat.Builder(this, base.CHANNEL_1_ID)
-                    .setSmallIcon(R.drawable.ic_baseline_monetization_on_24)
+        buttonRegister2.setOnClickListener {
+            val intent = Intent(this, Login::class.java).apply {
+                flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+            }
+            val pendingIntent: PendingIntent = PendingIntent.getActivity(this, 0, intent, 0)
+
+            val builder = NotificationCompat.Builder(this, "channel 1")
+                .setSmallIcon(R.drawable.ic_baseline_add_24)
+                .setContentTitle("title")
+                .setContentText("notif content")
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                // Set the intent that will fire when the user taps the notification
+                .setContentIntent(pendingIntent)
+                .setAutoCancel(true)
+
+            with(NotificationManagerCompat.from(this)) {
+                // notificationId is a unique int for each notification that you must define
+                notify(0, builder.build())
+
+                createNotificationChannel()
+            }
+
+            openMyActivity3()
+
+        }
+        fun createNotificationChannel() {
+            // Create the NotificationChannel, but only on API 26+ because
+            // the NotificationChannel class is new and not in the support library
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                val name = getString(R.string.channel_name)
+                val descriptionText = getString(R.string.channel_description)
+                val importance = NotificationManager.IMPORTANCE_DEFAULT
+                val channel = NotificationChannel("channel 1", name, importance).apply {
+                    description = descriptionText
+                }
+                // Register the channel with the system
+                val notificationManager: NotificationManager =
+                    getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+                notificationManager.createNotificationChannel(channel)
+            }
         }
 
-        //notif
-        notificationManager = NotificationManagerCompat.from(this)
+    }
 
+
+    private fun createNotificationChannel() {
+        TODO("Not yet implemented")
     }
 
     private fun openMyActivity2() {

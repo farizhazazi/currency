@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".top_up">
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/didact_gothic"
+        android:text="Saldo anda : Rp 1.234.000"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="30dp" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Maksimal Saldo Rp 20.000.000"
+        android:textSize="11.5sp"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="50dp" />
+
+    <LinearLayout
+        android:layout_width="421dp"
+        android:layout_height="653dp"
+        android:background="#4ABED3DA"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-5dp"
+        tools:layout_editor_absoluteY="77dp"></LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
