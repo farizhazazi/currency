@@ -17,7 +17,7 @@ class base  : Application(){
 
     private fun createNoficationChannel(){
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
-            val channel1 = NotificationChannel(
+            val channel1: NotificationChannel = NotificationChannel(
                 CHANNEL_1_ID,
                 "Channel Satu",
                 NotificationManager.IMPORTANCE_HIGH //behaviour
@@ -25,7 +25,8 @@ class base  : Application(){
             channel1.description = "Ini adalah notif"
 
             val manager =  getSystemService(NotificationManager::class.java)
-            manager.createNotificationChannel(channel1)
+            manager?.createNotificationChannel(channel1)
+
         }
     }
 }
