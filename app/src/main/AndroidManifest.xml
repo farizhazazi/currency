@@ -10,9 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Currency">
         <activity
+            android:name=".AddTarget"
+            android:exported="false" />
+        <activity
             android:name=".TUtama"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".top_up"
             android:exported="false" />

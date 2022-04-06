@@ -37,21 +37,26 @@
         <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/layout/fragment_profile.xml" value="0.27447916666666666" />
         <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/menu/bottom_menu.xml" value="0.27447916666666666" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/drawable-v24/background_utama2.xml" value="0.1" />
+        <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/drawable-v24/borderpinggirround.xml" value="0.1" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/drawable/background_utama.xml" value="0.1" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/drawable/backgroundhistory.xml" value="0.1" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/drawable/buku.xml" value="0.1" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/drawable/oranye.xml" value="0.1" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/drawable/test.xml" value="0.1" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/drawable/topup.xml" value="0.1" />
+        <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/drawable/transaksi_cepat1.xml" value="0.1" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/font/archivo_black.xml" value="0.1" />
+        <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/activity_add_target.xml" value="0.1" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/activity_confirm.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/activity_login.xml" value="0.5910493827160493" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/activity_register.xml" value="0.4227467811158798" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/activity_top_up.xml" value="0.1" />
+        <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/activity_ttarget.xml" value="0.25418060200668896" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/activity_tutama.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/fragment_home.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/fragment_profile.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/item_list.xml" value="0.10818505338078292" />
       </map>
     </option>
   </component>
