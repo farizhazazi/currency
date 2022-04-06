@@ -15,6 +15,7 @@
         <activity
             android:name=".TUtama"
             android:exported="false"
+            android:label="Tabungan Utama"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".top_up"
