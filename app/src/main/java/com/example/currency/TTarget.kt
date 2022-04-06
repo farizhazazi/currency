@@ -1,5 +1,6 @@
 package com.example.currency
 
+import android.content.Intent
 import android.icu.text.NumberFormat
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -14,23 +15,25 @@ class TTarget : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_ttarget)
 
-        val rv = findViewById<RecyclerView>(R.id.rv)
+       // val rv = findViewById<RecyclerView>(R.id.rv)
         val btnadd = findViewById<ImageButton>(R.id.imageButton)
 
-        val localeid = Locale("in","ID")
-        val numberFormat = NumberFormat.getCurrencyInstance(localeid)
+        //val localeid = Locale("in","ID")
+        //val numberFormat = NumberFormat.getCurrencyInstance(localeid)
 
-        val baranglist = mutableListOf(
-            BTarget("Laptop Gaming", (numberFormat.format(30000000)).toDouble())
-        )
+        //val baranglist = mutableListOf(
+          //  BTarget("Laptop Gaming", (numberFormat.format(30000000)).toDouble())
+        //)
 
         //memasukkan data ke dalam adapter dan menampilkan ke dalam rv
-        val adapter = BTargetAdapter(baranglist)
-        rv.adapter = adapter
-        rv.layoutManager= LinearLayoutManager(this)
+        //val adapter = BTargetAdapter(baranglist)
+        //rv.adapter = adapter
+       // rv.layoutManager= LinearLayoutManager(this)
 
         btnadd.setOnClickListener{
-            val brg =
+            val intent  = Intent(this@TTarget, AddTarget::class.java)
+            startActivity(intent)
+
         }
     }
 }

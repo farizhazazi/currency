@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-
+/*
 class BTargetAdapter(private val barangtarget: List) :
     RecyclerView.Adapter() {
 
@@ -32,5 +32,4 @@ class BTargetAdapter(private val barangtarget: List) :
     override fun getItemCount(): Int{
         return barangtarget.size
     }
-}
-
+}*/

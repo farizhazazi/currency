@@ -11,7 +11,7 @@ import androidx.core.app.NotificationManagerCompat
 import androidx.navigation.fragment.FragmentNavigator
 
 class myAReceiver : BroadcastReceiver(){
-    override fun onReceive(context: Context?, intent: Intent?) {
+    override fun onReceive(context: Context, intent: Intent) {
 
         val i = Intent(context, AddTarget::class.java)
         intent!!.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK

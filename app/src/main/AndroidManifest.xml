@@ -11,6 +11,15 @@
         android:theme="@style/Theme.Currency">
         <activity
             android:name=".AddTarget"
+            android:exported="false"
+            android:label="Tabungan Target"
+            android:parentActivityName=".TTarget"/>
+        <receiver
+            android:name=".myAReceiver"
+            android:enabled="true"
+            android:exported="true"/>
+        <activity
+            android:name=".TTarget"
             android:exported="false" />
         <activity
             android:name=".TUtama"
