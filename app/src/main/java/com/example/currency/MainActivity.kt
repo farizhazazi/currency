@@ -3,6 +3,9 @@ package com.example.currency
 import android.app.Notification
 import android.content.Intent
 import android.content.IntentFilter
+import android.icu.text.DateFormat
+import android.icu.text.SimpleDateFormat
+import android.icu.util.Calendar
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -25,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.fragment)
 
         bottomNavigationView.setupWithNavController(navController)
+
 
     }
 

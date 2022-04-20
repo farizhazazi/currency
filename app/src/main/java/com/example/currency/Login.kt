@@ -44,11 +44,11 @@ class Login : AppCompatActivity() {
         buttonLogin.setOnClickListener{
             if (UsernameEditText.text.toString() == "test" &&
                 PasswordEditText.text.toString() == "password") {
-                Toast.makeText(this,"Succes",Toast.LENGTH_SHORT)
+                var a = Toast.makeText(this,"Success",Toast.LENGTH_SHORT)
                 startService(servicelogin)
                 open1()
             } else {
-                Toast.makeText(this,"Failed",Toast.LENGTH_SHORT)
+                var a = Toast.makeText(this,"Failed",Toast.LENGTH_SHORT)
             }
 
 
