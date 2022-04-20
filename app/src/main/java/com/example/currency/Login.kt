@@ -13,13 +13,17 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import android.widget.EditText
+import android.widget.Toast
 
 
 class Login : AppCompatActivity() {
 
     private lateinit var buttonLogin: Button
     private lateinit var Regis: Button
-    private lateinit var notificationManager: NotificationManagerCompat
+    private lateinit var UsernameEditText: EditText
+    private lateinit var PasswordEditText: EditText
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,12 +35,22 @@ class Login : AppCompatActivity() {
         Regis = findViewById(R.id.button2)
         //Regis.setOnClickListener { open2() }
 
+        UsernameEditText = findViewById(R.id.editTextTextPersonName2)
+        PasswordEditText = findViewById(R.id.editTextTextPassword)
+
 
         //menjalankan service
         val servicelogin = Intent(this, LoginSuccesService::class.java)
         buttonLogin.setOnClickListener{
-            startService(servicelogin)
-            open1()
+            if (UsernameEditText.text.toString() == "test" &&
+                PasswordEditText.text.toString() == "password") {
+                Toast.makeText(this,"Succes",Toast.LENGTH_SHORT)
+                startService(servicelogin)
+                open1()
+            } else {
+                Toast.makeText(this,"Failed",Toast.LENGTH_SHORT)
+            }
+
 
         }
         Regis.setOnClickListener{open2()}
