@@ -9,17 +9,26 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Message
+import android.view.View
 import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 
-class Register : AppCompatActivity() {
+//sharepref
+private val PrefFileName = "MyFilePref"
+
+class Register : AppCompatActivity(), View.OnClickListener{
     private lateinit var buttonLogin2: Button
     private lateinit var buttonRegister2 : Button
 
     //notif
     private lateinit var notificationManager: NotificationManagerCompat
 
+    //share
+    private lateinit var buttonshare : Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -56,8 +65,43 @@ class Register : AppCompatActivity() {
 
         }
 
+        buttonshare = findViewById(R.id.button6)
+        buttonshare.setOnClickListener(this)
     }
 
+    override fun onClick(p0: View?) {
+        var share = SharePrefHelper(this, PrefFileName)
+
+        // share
+        val usernametext = findViewById<EditText>(R.id.editTextTextPersonName4)
+        val emaill = findViewById<EditText>(R.id.editTextPhone)
+        val nohp = findViewById<EditText>(R.id.editTextTextPassword4)
+        val pw = findViewById<EditText>(R.id.editTextTextPassword2)
+
+
+        when(p0?.id){
+            R.id.button4 ->{
+                share.nama = usernametext.text.toString()
+                share.Email = emaill.text.toString()
+                share.phone = nohp.text.toString()
+                share.pass = pw.text.toString()
+
+                Toast.makeText(this, "Register Done", Toast.LENGTH_SHORT).show()
+
+                usernametext.text.clear()
+                emaill.text.clear()
+                nohp.text.clear()
+                pw.text.clear()
+            }
+
+            R.id.button6 ->{
+                usernametext.setText(share.nama)
+                emaill.setText(share.Email)
+                nohp.setText(share.phone)
+                pw.setText(share.pass)
+            }
+        }
+    }
     private fun createNotificationChannel() {
         // Create the NotificationChannel, but only on API 26+ because
         // the NotificationChannel class is new and not in the support library
@@ -89,4 +133,6 @@ class Register : AppCompatActivity() {
         startActivity(intentdaftar2)
 
     }
+
+
 }
