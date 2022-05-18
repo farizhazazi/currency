@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Kuliah/Semester 6/currency/app/src/main/res/layout/activity_add_target.xml" value="0.24003623188405798" />
         <entry key="..\:/Kuliah/Semester 6/currency/app/src/main/res/layout/activity_confirm.xml" value="0.25" />
         <entry key="..\:/Kuliah/Semester 6/currency/app/src/main/res/layout/activity_login.xml" value="0.264" />
-        <entry key="..\:/Kuliah/Semester 6/currency/app/src/main/res/layout/activity_register.xml" value="0.12158054711246201" />
+        <entry key="..\:/Kuliah/Semester 6/currency/app/src/main/res/layout/activity_register.xml" value="0.4" />
+        <entry key="..\:/Kuliah/Semester 6/currency/app/src/main/res/layout/activity_top_up.xml" value="0.264" />
         <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.290625" />
         <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/a1.xml" value="0.15989583333333332" />
         <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/a2.xml" value="0.15989583333333332" />
