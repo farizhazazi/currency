@@ -5,6 +5,8 @@ import android.app.NotificationManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
+import android.media.AudioManager
+import android.media.SoundPool
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,7 +18,7 @@ import androidx.core.app.NotificationManagerCompat
 import android.widget.EditText
 import android.widget.Toast
 
-
+var sp : SoundPool? = null
 class Login : AppCompatActivity() {
 
     private lateinit var buttonLogin: Button
@@ -54,8 +56,35 @@ class Login : AppCompatActivity() {
 
         }
         Regis.setOnClickListener{open2()}
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
+         createNewSoundPool()
+        }
+        else{
+            createOldNewSoundPool()
+        }
+
+        sp?.setOnLoadCompleteListener{SoundPool, id, status->
+            if(status != 0){
+                Toast.makeText(this,"Login Error",Toast.LENGTH_SHORT).show()
+            }
+            else{
+                Toast.makeText(this,"Success",Toast.LENGTH_SHORT).show()
+            }
+        }
+        val soundID = sp?.load(this, R.raw.dering,1)
+
     }
 
+    //soundpool
+    private fun createNewSoundPool(){
+        sp = SoundPool.Builder().setMaxStreams(15).build()
+
+    }
+
+    private fun createOldNewSoundPool(){
+        sp = SoundPool(15, AudioManager.STREAM_MUSIC,0)
+    }
     private fun createNotificationChannel() {
         TODO("Not yet implemented")
     }
