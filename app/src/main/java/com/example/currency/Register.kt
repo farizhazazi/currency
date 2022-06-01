@@ -70,6 +70,7 @@ class Register : AppCompatActivity(), View.OnClickListener{
         buttonshare = findViewById(R.id.button6)
         buttonshare.setOnClickListener(this)
 
+
     }
 
     override fun onClick(p0: View?) {
