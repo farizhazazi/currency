@@ -29,6 +29,7 @@ class Register : AppCompatActivity(), View.OnClickListener{
 
     //share
     private lateinit var buttonshare : Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -39,7 +40,8 @@ class Register : AppCompatActivity(), View.OnClickListener{
         buttonLogin2.setOnClickListener { openMyActivity2() }
         //buttonRegister2.setOnClickListener { openMyActivity3() }
 
-        buttonRegister2.setOnClickListener {
+       // buttonRegister2.setOnClickListener(this)
+       buttonRegister2.setOnClickListener {
             val intent = Intent(this@Register, Register::class.java).apply {
                 flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             }
@@ -60,13 +62,14 @@ class Register : AppCompatActivity(), View.OnClickListener{
 
                 createNotificationChannel()
             }
-
-            openMyActivity3()
+            buttonRegister2.setOnClickListener(this)
+            //openMyActivity3()
 
         }
 
         buttonshare = findViewById(R.id.button6)
         buttonshare.setOnClickListener(this)
+
     }
 
     override fun onClick(p0: View?) {
@@ -92,6 +95,8 @@ class Register : AppCompatActivity(), View.OnClickListener{
                 emaill.text.clear()
                 nohp.text.clear()
                 pw.text.clear()
+
+                openMyActivity3()
             }
 
             R.id.button6 ->{

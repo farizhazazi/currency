@@ -54,7 +54,6 @@ class AddTarget : AppCompatActivity() {
         btnset.setOnClickListener{
 
 
-
           alarmManager   = getSystemService(Context.ALARM_SERVICE) as AlarmManager
             val intent = Intent(this, myAReceiver::class.java)
 
