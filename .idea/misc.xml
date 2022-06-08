@@ -3,11 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Kuliah/Semester 6/currency/app/src/main/res/layout/activity_add_target.xml" value="0.24003623188405798" />
         <entry key="..\:/Kuliah/Semester 6/currency/app/src/main/res/layout/activity_confirm.xml" value="0.25" />
         <entry key="..\:/Kuliah/Semester 6/currency/app/src/main/res/layout/activity_login.xml" value="0.264" />
-        <entry key="..\:/Kuliah/Semester 6/currency/app/src/main/res/layout/activity_register.xml" value="0.4" />
-        <entry key="..\:/Kuliah/Semester 6/currency/app/src/main/res/layout/activity_top_up.xml" value="0.264" />
+        <entry key="..\:/Kuliah/Semester 6/currency/app/src/main/res/layout/activity_register.xml" value="0.12158054711246201" />
         <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.290625" />
         <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/a1.xml" value="0.15989583333333332" />
         <entry key="..\:/Semester 5/Pemrograman Web Dasar/Mobile JKT 12/app/src/main/res/drawable/a2.xml" value="0.15989583333333332" />
@@ -51,21 +49,22 @@
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/drawable/topup.xml" value="0.1" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/drawable/transaksi_cepat1.xml" value="0.1" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/font/archivo_black.xml" value="0.1" />
-        <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/activity_add_target.xml" value="0.22" />
+        <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/activity_add_target.xml" value="0.1" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/activity_confirm.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/activity_login.xml" value="0.13333333333333333" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/activity_register.xml" value="0.22" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/activity_top_up.xml" value="0.1" />
-        <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/activity_ttarget.xml" value="0.1" />
+        <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/activity_ttarget.xml" value="0.25418060200668896" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/activity_tutama.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/fragment_home.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/fragment_profile.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/user/tugasS6/currency/app/src/main/res/layout/item_list.xml" value="0.10818505338078292" />
         <entry key="..\:/tugasS6/currency/app/src/main/res/layout/activity_add_target.xml" value="0.11548913043478261" />
-        <entry key="..\:/tugasS6/currency/app/src/main/res/layout/activity_barang_target.xml" value="0.3333333333333333" />
+        <entry key="..\:/tugasS6/currency/app/src/main/res/layout/activity_barang_target.xml" value="0.22" />
         <entry key="..\:/tugasS6/currency/app/src/main/res/layout/activity_ttarget.xml" value="0.40807651434643993" />
         <entry key="..\:/tugasS6/currency/app/src/main/res/layout/activity_tutama.xml" value="0.16666666666666666" />
+        <entry key="..\:/tugasS6/currency/app/src/main/res/layout/test.xml" value="0.16077898550724637" />
       </map>
     </option>
   </component>
