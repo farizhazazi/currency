@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageButton
 import android.widget.ImageView
+import android.widget.LinearLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import java.util.*
@@ -17,6 +18,7 @@ class TTarget : AppCompatActivity() {
 
        // val rv = findViewById<RecyclerView>(R.id.rv)
         val btnadd = findViewById<ImageButton>(R.id.imageButton)
+        val LMac = findViewById<LinearLayout>(R.id.layoutmacbook)
 
         //val localeid = Locale("in","ID")
         //val numberFormat = NumberFormat.getCurrencyInstance(localeid)
@@ -33,7 +35,11 @@ class TTarget : AppCompatActivity() {
         btnadd.setOnClickListener{
             val intent  = Intent(this@TTarget, AddTarget::class.java)
             startActivity(intent)
+        }
 
+        LMac.setOnClickListener{
+            val intent2 = Intent(this@TTarget, BarangTarget::class.java)
+            startActivity(intent2)
         }
     }
 }
