@@ -8,25 +8,34 @@ import android.icu.text.SimpleDateFormat
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Parcelable
 import android.view.View
-import android.widget.Button
-import android.widget.DatePicker
-import android.widget.EditText
-import android.widget.Toast
+import android.widget.*
+import androidx.versionedparcelable.VersionedParcelize
 import com.example.currency.databinding.ActivityMainBinding
 import com.google.android.material.datepicker.MaterialCalendar
 import com.google.android.material.datepicker.MaterialDatePicker
 import java.util.*
 
-class AddTarget : AppCompatActivity() {
+class AddTarget : AppCompatActivity(), View.OnClickListener {
 
     private lateinit var btn1 : Button
     private lateinit var btn2: Button
     private lateinit var picker: EditText
+    private lateinit var person: EditText
+    private lateinit var number: EditText
+    private lateinit var date: EditText
     private lateinit var alarmAReceiver: myAReceiver
     private lateinit var alarmManager: AlarmManager
     private lateinit var pendingIntent: PendingIntent
     private lateinit var calendar: Calendar
+    //SQL
+    var mysql : DBHelper? = null
+
+    val addname = findViewById<EditText>(R.id.editTextTextPersonName)
+    val price =findViewById<EditText>(R.id.editTextNumber)
+
+    val calenders = findViewById<EditText>(R.id.editTextDate)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +45,9 @@ class AddTarget : AppCompatActivity() {
 
         val btnbatal = findViewById<Button>(R.id.btnBatal)
         val btnset =findViewById<Button>(R.id.btnSet)
+
+        val addname = findViewById<EditText>(R.id.editTextTextPersonName)
+        val price =findViewById<EditText>(R.id.editTextNumber)
 
         val calenders = findViewById<EditText>(R.id.editTextDate)
         calenders.transformIntoDatePicker(this, "MM/dd/yyyy")
@@ -73,11 +85,15 @@ class AddTarget : AppCompatActivity() {
 
         }
 
+        //SQL
+        mysql = DBHelper(this)
+        updateAdapter()
+        btnset.setOnClickListener(this)
 
-      //  createNotificationChannel()
 
     }
 
+    //  createNotificationChannel()
     private fun createNotificationChannel(){
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
             val name : CharSequence = "androidReminderChannel"
@@ -117,5 +133,53 @@ class AddTarget : AppCompatActivity() {
         }
     }
 
+
+    //nambah database
+    override fun onClick(view: View?) {
+        when (view?.id) {
+            R.id.btnSet -> {
+/*
+                val targettmp : TargetP =  TargetP() //error ditargetP belakang
+                targettmp.nama = addname.text.toString()
+                targettmp.harga = price.text.toString()
+                targettmp.jangka = calenders.text.toString()
+
+
+                var hasil  = mysql?.addTarget(targettmp)
+                if(hasil!=-1L ){
+                    Toast.makeText(this,"Tersimpan",Toast.LENGTH_SHORT).show()
+                }
+                else {
+                    Toast.makeText(this,"Error",Toast.LENGTH_SHORT).show()
+                }*/
+                updateAdapter()
+                addname.text.clear()
+                price.text.clear()
+                calenders.text.clear()
+            }
+        }
+    }
+
+    //baca database
+    private fun updateAdapter(){
+        /*doAsync{
+            var listnama = mysql?.view()?.toTypedArray()
+            runOnUiThread(){
+                if( != null && listnama?.size != 0){
+                    val arrayAdapter = ArrayAdapter(applicationContext, android.R.layout.simple_spinner_item, listnama)
+                        .adapter = arrayAdapter
+                        .onItemSelectedListener = object : AdapterView.onItemSelectedListener{
+                        override fun onNothingSelected(v: AdapterView<*>?){
+
+                        }
+
+                        override fun onItemSelected(v:AdapterView<*>?, v1: View?, a: Int, l:Long){
+                        Toast.makeText(this@AddTarget, listnama?. get(a), Toast.LENGTH_SHORT).show()
+                        }
+
+                }
+            }
+        }*/
+    }
 
 }

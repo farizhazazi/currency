@@ -10,19 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Currency">
         <activity
-            android:name=".BarangTarget"
-            android:exported="false" />
-        <activity
             android:name=".AddTarget"
             android:exported="false"
             android:label="Tabungan Target"
-            android:parentActivityName=".TTarget" />
-
+            android:parentActivityName=".TTarget"/>
         <receiver
             android:name=".myAReceiver"
             android:enabled="true"
-            android:exported="true" />
-
+            android:exported="true"/>
         <activity
             android:name=".TTarget"
             android:exported="false" />
@@ -45,8 +40,7 @@
 
         <activity
             android:name=".Register"
-            android:exported="true"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />
