@@ -1,5 +1,6 @@
 package com.example.currency
 
+import android.annotation.TargetApi
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
@@ -57,6 +58,7 @@ class Login : AppCompatActivity() {
         }
         Regis.setOnClickListener{open2()}
 
+        //soundpool
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
          createNewSoundPool()
         }
@@ -72,16 +74,20 @@ class Login : AppCompatActivity() {
                 Toast.makeText(this,"Success",Toast.LENGTH_SHORT).show()
             }
         }
-        val soundID = sp?.load(this, R.raw.dering,1)
+        var soundID = sp!!.load(this, R.raw.dering,1)
 
+
+        sp!!.play(soundID, 1.0f, 1.0f,0,0,1.0f)
     }
 
     //soundpool
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private fun createNewSoundPool(){
         sp = SoundPool.Builder().setMaxStreams(15).build()
 
     }
 
+    @Suppress("SOUNDPOOL")
     private fun createOldNewSoundPool(){
         sp = SoundPool(15, AudioManager.STREAM_MUSIC,0)
     }

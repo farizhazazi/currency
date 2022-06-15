@@ -5,16 +5,16 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.icu.text.SimpleDateFormat
-import android.os.Build
+import android.os.*
 import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.os.Parcelable
 import android.view.View
 import android.widget.*
 import androidx.versionedparcelable.VersionedParcelize
 import com.example.currency.databinding.ActivityMainBinding
 import com.google.android.material.datepicker.MaterialCalendar
 import com.google.android.material.datepicker.MaterialDatePicker
+import java.io.FileNotFoundException
+import java.io.IOException
 import java.util.*
 
 class AddTarget : AppCompatActivity(), View.OnClickListener {
@@ -29,6 +29,7 @@ class AddTarget : AppCompatActivity(), View.OnClickListener {
     private lateinit var alarmManager: AlarmManager
     private lateinit var pendingIntent: PendingIntent
     private lateinit var calendar: Calendar
+
     //SQL
     var mysql : DBHelper? = null
 
@@ -36,6 +37,8 @@ class AddTarget : AppCompatActivity(), View.OnClickListener {
     val price =findViewById<EditText>(R.id.editTextNumber)
 
     val calenders = findViewById<EditText>(R.id.editTextDate)
+
+    val edit_text1 = findViewById<EditText>(R.id.editTextTextPersonName)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,8 +49,16 @@ class AddTarget : AppCompatActivity(), View.OnClickListener {
         val btnbatal = findViewById<Button>(R.id.btnBatal)
         val btnset =findViewById<Button>(R.id.btnSet)
 
+        val btnsave =findViewById<Button>(R.id.btnSSave)
+        val edit_text2 =findViewById<EditText>(R.id.edit_text2)
+        val btnRead = findViewById<Button>(R.id.btnread)
+        val edit_text3 = findViewById<EditText>(R.id.edit_text3)
+        val btnDelete = findViewById<Button>(R.id.btnreaddir)
+        val btnreaddir = findViewById<Button>(R.id.btngetfile)
+
         val addname = findViewById<EditText>(R.id.editTextTextPersonName)
         val price =findViewById<EditText>(R.id.editTextNumber)
+
 
         val calenders = findViewById<EditText>(R.id.editTextDate)
         calenders.transformIntoDatePicker(this, "MM/dd/yyyy")
@@ -63,7 +74,7 @@ class AddTarget : AppCompatActivity(), View.OnClickListener {
             startActivity(intent)
         }
 
-        btnset.setOnClickListener{
+            btnset.setOnClickListener{
 
 
           alarmManager   = getSystemService(Context.ALARM_SERVICE) as AlarmManager
@@ -87,11 +98,59 @@ class AddTarget : AppCompatActivity(), View.OnClickListener {
 
         //SQL
         mysql = DBHelper(this)
+        //mysql!!.addTarget(targettmp)
         updateAdapter()
         btnset.setOnClickListener(this)
 
+        //penyimpanan internal
+        btnsave.setOnClickListener(){
+            var output = openFileOutput("${edit_text2.text}).text",
+                Context.MODE_PRIVATE).apply {
+                    write(edit_text2.text.toString().toByteArray())
+                close()
+            }
+            edit_text1.text.clear()
+            //edit_text2.text.clear()
+            Toast.makeText(this,"File Save",Toast.LENGTH_SHORT).show()
+        }
+
+        btnRead.setOnClickListener {
+            edit_text1.text.clear()
+            try {
+                var input = openFileInput("${edit_text3.text}.txt")
+                    .bufferedReader().useLines {
+                        for (text in it.toList()) {
+                            edit_text1.setText("${edit_text1.text}\n$text")
+                        }
+                    }
+            } catch (e: FileNotFoundException) {
+                edit_text1.setText("File Not Found")
+            } catch (e: IOException) {
+                edit_text1.setText("File Cant be read")
+            }
+            edit_text3.text.clear()
+        }
+        btnreaddir.setOnClickListener {
+            if (fileList().size != 0)
+                for (i in fileList())
+                    edit_text1.setText("${edit_text1.text}\n$i")
+            else
+                edit_text1.setText("File Empty")
+        }
+
+        btnDelete.setOnClickListener {
+            if (fileList().size !=0
+
+            ) {
+                for (i in fileList())
+                    deleteFile(i)
+                edit_text1.setText("All File Deteled")
+            } else
+                edit_text1.setText("File Empty")
+        }
 
     }
+
 
     //  createNotificationChannel()
     private fun createNotificationChannel(){
@@ -139,7 +198,7 @@ class AddTarget : AppCompatActivity(), View.OnClickListener {
         when (view?.id) {
             R.id.btnSet -> {
 /*
-                val targettmp : TargetP =  TargetP() //error ditargetP belakang
+                val targettmp  = TargetP()
                 targettmp.nama = addname.text.toString()
                 targettmp.harga = price.text.toString()
                 targettmp.jangka = calenders.text.toString()
@@ -181,5 +240,6 @@ class AddTarget : AppCompatActivity(), View.OnClickListener {
             }
         }*/
     }
+
 
 }

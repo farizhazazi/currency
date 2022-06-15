@@ -32,7 +32,7 @@ class DBHelper(context: Context): SQLiteOpenHelper (context, DATABASE_NAME, null
         private val DATABASE_NAME = "MySQLMobile.db"
     }
 
-    //tambah database
+    //tambah database (manipulasi database/ menulis)
     fun addTarget(target: TargetP) : Long{
         val data = this.writableDatabase
         val contentValues = ContentValues()
@@ -63,7 +63,7 @@ class DBHelper(context: Context): SQLiteOpenHelper (context, DATABASE_NAME, null
         var username: String = ""
         if(kursor.moveToFirst()){
             do{
-                username = kursor.getString(kursor.getColumnIndex(DBTarget.targetTable.kolomnama))
+                username = kursor.getString((kursor.getColumnIndex(DBTarget.targetTable.kolomnama))).toString()
                 listnama.add(username)
             }while (kursor.moveToNext())
         }

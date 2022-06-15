@@ -14,6 +14,11 @@
             android:exported="false"
             android:label="Tabungan Target"
             android:parentActivityName=".TTarget"/>
+        <activity
+            android:name=".BarangTarget"
+            android:exported="false"
+            android:label="Target"
+            android:parentActivityName=".TTarget"/>
         <receiver
             android:name=".myAReceiver"
             android:enabled="true"
